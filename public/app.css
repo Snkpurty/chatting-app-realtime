@@ -1,0 +1,100 @@
+body{
+    margin: 0px;
+    background-color: aqua;
+    font-size: 1.2rem;
+}
+#container{
+    background-color: aqua;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: .5fr 5fr .5fr;
+    grid-template-areas:
+    'navbar navbar'
+    'sidebar chatDisplay '
+    'footerbar footerbar' ;
+}
+#chat{
+    border: 2px solid black;
+    height: 550px;
+    width: 1175px;
+    overflow-y: auto;
+}
+.message{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: wheat;
+    padding: 10px;
+    margin: 10px;
+    max-width: 1150px;
+}
+.left{
+    float: left;
+    clear: both;
+}
+.right{
+    float: right;
+    clear: both;
+}
+#fchat{
+    height: 50px;
+    width: 1050px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#divinput{
+    height: 100%;
+    width: 88%;
+    background-color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 33px;
+    border: 2px solid black;
+}
+#inputText{
+    height: 70%;
+    width: 95%;
+    background-color: wheat;
+    border: 2px solid white;
+}
+#send{
+    height: 100%;
+    width: 8%;
+    background-color: wheat;
+    /* border: 2px solid black; */
+    /* border-radius: 50px; */
+}
+#send:hover{
+    background-color: turquoise;
+}
+#sendlogo{
+    height: 100%;
+    width: 100%;
+}
+  #navbar{
+    grid-area: navbar;
+    /* background: blue; */
+    border: 1px solid black;
+  }
+  #sidebar{
+    grid-area: sidebar;
+    /* background: green; */
+    border: 1px solid black;
+  }
+  #chatDisplay{
+    grid-area: chatDisplay;
+    /* background: yellowgreen; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+  }
+  #footerbar{
+    grid-area: footerbar;
+    /* background: plum; */
+    border: 1px solid black;
+  }
